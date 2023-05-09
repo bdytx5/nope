@@ -7,7 +7,7 @@ from io import BytesIO
 app = Flask(__name__)
 mtcnn = MTCNN()
 
-@app.route('/detect_faces', methods=['POST'])
+@app.route('/detect_faces', methods=['GET'])
 def detect_faces():
     image_url = request.json['image_url']
     
